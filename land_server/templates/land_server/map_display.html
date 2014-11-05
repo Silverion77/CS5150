@@ -3,13 +3,13 @@
 {% block primary %}
 <head>
 
-    <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
-    <script type="text/javascript"
+  <style type="text/css">
+    html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+  </style>
+  <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Ty1UgHg0s7lP0Vui5LJb9MnaEsu0sfU">
-    </script>
-    <script type="text/javascript">
+  </script>
+  <script type="text/javascript">
       function initialize() {
         var mapOptions = {
           zoom: 13,
@@ -24,11 +24,38 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
-  <body>
-  <div>
-    Hello World, here is a map.
-  </div>
-    <div id="map-canvas"></div>
-  </body>
+<body>
 
-  {% endblock %}
+<h1 class='text-center jumbotron'> Map Display </h1>
+
+<form id='quest_form' method='post' action="{{ request.get_full_path }}" enctype='multipart/form-data' class="container">
+    {% csrf_token %}
+
+    <label for='id_layer_select'> Choose visible layer: </label>
+    <select id='id_layer_select'>
+      <option value='default'>Default</option>
+      <option value='first'>Vegetation Layer</option>
+      <option value='second'>Water Layer</option>
+    </select>
+
+    <br/>
+
+    <input type='submit' id='id_submit' name='SubmitLayer' value='Set Layer' class='btn btn-primary'/>
+</form>
+
+<div>
+    Hello World, here is a map.
+</div>
+    <div id="map-canvas"></div>
+</body>
+
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }}
+
+<script>
+
+</script>
+
+{% endblock %}

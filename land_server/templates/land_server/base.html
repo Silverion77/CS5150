@@ -1,5 +1,16 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% block css %}
+	{% compress css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}"/>
+	{% endcompress %}
+{% endblock %}
 
 {% block primary %}
+
 {% endblock %}
 
 {% block scripts %}
