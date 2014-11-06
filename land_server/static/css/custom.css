@@ -1,0 +1,56 @@
+#id_mask .mask {
+    position:fixed;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+
+#id_popup_div .window {
+    position:fixed;
+    width:600px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+.two_column_holder {
+   width:600px;
+   margin:0 auto;
+}
+.left_col_holder {
+   float:left;
+   width:300px;
+   height:200px;
+}
+.right_col_holder {
+   float:right;
+   width:300px;
+   height:200px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
