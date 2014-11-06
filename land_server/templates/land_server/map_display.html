@@ -24,14 +24,19 @@
       <option value='second'>Water Layer</option>
     </select>
 
-    <br/>
 
     <input type='submit' id='id_submit_layer' name='SubmitLayer' value='Set Layer' class='btn btn-primary'/>
 </form>
 
-<div>
-    Hello World, here is a map.
-</div>
+
+<form id='layer_form' action="" class="container">
+  <label for='id_layer_select'> Select Region: </label> <br>
+Latitude: <input type="text" name="lat_upper_bound" placeholder="Upper bound">
+          <input type ="text" name="lat_lower_bound" placeholder="Lower bound"><br>
+Longitude: <input type="text" name="long_left_bound" placeholder="Left bound">
+          <input type ="text" name="lat_right_bound" placeholder="Right bound"><br>
+</form>
+
 
 <div id="ajax_information"></div>
 <div id="map-canvas"></div>
